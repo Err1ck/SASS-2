@@ -1,0 +1,43 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+.box {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid $color-primary;
+
+    .box__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $color-tertiary;
+
+        text-decoration: underline 1px $color-secondary;
+        text-underline-offset: 8px;
+        
+    }
+    .box__green{
+        padding: 16px;
+        display: flex;
+
+        article{
+            padding: 8px;   
+
+            display: flex;
+            justify-content: center;
+            
+            text-align: center;
+
+            border: 1px solid $color-tertiary; 
+        }
+        .box__green__blue{
+            color: $color-secondary;
+        }
+        .box__green__red{
+            color: $color-primary;
+        }
+    }
+}

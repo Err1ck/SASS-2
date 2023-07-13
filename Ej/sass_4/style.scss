@@ -1,0 +1,45 @@
+@import "variables","functions","mixin";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    padding: rem(16px);
+    margin: rem(16px);
+    @include flex-box (column,rem(32px),center,center);
+ 
+    border: rem(1px) solid $color-primary;
+
+    &__title {
+        @include card(none,none ,rem(38px));
+        @extend %h;
+        
+        text-decoration: underline rem(1px) $color-secondary;
+        text-underline-offset: rem(8px);      
+    }
+    &__subtitle{
+        @include card(none,$color-primary,rem(28px));
+        @extend %h;
+    }
+    &__green{
+        @include flex-box (row,0,center,center,center);
+        article{        
+            @include flex-box (row,0,center,center);
+        }
+        &__blue{
+            @include card ($color-secondary,$color-tertiary,rem(22px));
+        }
+        &__red{
+            @include card ($color-primary,$color-tertiary,rem(22px));
+        }
+    }
+    &__blue{
+        @include flex-box (row,0,center,center,center);
+        width: 100%;
+        border: rem(1px) solid $color-secondary;
+        &__green{
+            @include card($color-tertiary,none,rem(28px),rem(32px));
+        }
+    }
+}

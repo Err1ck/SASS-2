@@ -1,0 +1,32 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+.box .box__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  text-decoration: underline 1px blue;
+  text-underline-offset: 8px;
+}
+.box .box__green {
+  padding: 16px;
+  display: flex;
+}
+.box .box__green article {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid green;
+}
+.box .box__green .box__green__blue {
+  color: blue;
+}
+.box .box__green .box__green__red {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

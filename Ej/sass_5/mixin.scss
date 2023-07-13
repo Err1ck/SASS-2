@@ -1,0 +1,19 @@
+@mixin flex-box($x:column ,$y:0 ,$a:none ,$b:none,$c:none) {
+    display: flex;
+    flex-direction: $x;
+    gap: $y;
+
+    align-items: $a;
+    justify-content: $b;
+    text-align: $c;
+}
+@mixin card($a,$b,$c,$z:rem(24px)){
+    color: $a;
+    border: rem(1px) solid $b;
+    font-size: $c;
+    padding: $z;
+}
+
+%h {
+    color: $color-tertiary;         
+}

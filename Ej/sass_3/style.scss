@@ -1,0 +1,37 @@
+@import "variables","functions","mixin";
+
+.box {
+    padding: rem(16px);
+    @include flex-box (column,16px);
+    
+    border: rem(1px) solid $color-primary;
+
+    .box__title {
+        @include flex-box (column,0,center,center);
+        @include card($color-tertiary,none ,rem(38px));
+        
+        text-decoration: underline rem(1px) $color-secondary;
+        text-underline-offset: rem(8px);      
+    }
+    .box__green{
+        @include flex-box (row,0,center,center,center);
+
+        article{        
+            @include flex-box (row,0,center,center);
+        }
+        .box__green__blue{
+            @include card ($color-secondary,$color-tertiary,rem(24px));
+        }
+        .box__green__red{
+            @include card ($color-primary,$color-tertiary,rem(24px));
+        }
+    }
+    .box__blue{
+        @include flex-box (row,0,center,center,center);
+
+        .box__blue__green{
+            width: 100%;
+            @include card($color-tertiary,$color-secondary,rem(32px));
+        }
+    }
+}
